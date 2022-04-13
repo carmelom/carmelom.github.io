@@ -1,0 +1,36 @@
+dt {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+dd {
+    padding: 0 0 0.8em 0;
+}
+
+a {
+    color: #2780e3;
+    border-bottom: none !important;
+}
+
+.img-profile {
+    float: right;
+    margin-right: 7px;
+    margin-top: 7px;
+    width:260px;
+}
+
+.img-research {
+    float: right;
+    width: 400px;
+}
+
+body {
+    padding-top: 0px;
+}
+
+/* https://stackoverflow.com/a/32952763
+ */
+/* @media print {
+  @page { margin: 0; }
+  body { margin: 1.6cm; }
+} */
