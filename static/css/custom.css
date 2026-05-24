@@ -31,6 +31,43 @@
 
 .site-name { color: inherit; }
 
+.theme-toggle {
+  background: transparent;
+  border: 0;
+  color: var(--pico-primary);
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  font-size: 1rem;
+  line-height: 1;
+  width: auto;
+}
+
+.theme-toggle:hover {
+  color: var(--pico-primary-hover);
+}
+
+.theme-toggle:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--pico-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.theme-toggle .theme-icon-light { display: none; }
+.theme-toggle .theme-icon-dark { display: inline-block; }
+
+[data-theme="dark"] .theme-toggle .theme-icon-dark { display: none; }
+[data-theme="dark"] .theme-toggle .theme-icon-light { display: inline-block; }
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .theme-toggle .theme-icon-dark { display: none; }
+  html:not([data-theme="light"]) .theme-toggle .theme-icon-light { display: inline-block; }
+}
+
 .site-footer {
   border-top: 1px solid var(--pico-muted-border-color);
   padding: 1rem var(--pico-spacing);
