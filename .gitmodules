@@ -1,0 +1,3 @@
+[submodule "assets/academicons"]
+	path = assets/academicons
+	url = https://github.com/jpswalsh/academicons.git
