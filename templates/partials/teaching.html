@@ -1,0 +1,20 @@
+<section id="teaching">
+  <h2>Teaching</h2>
+
+  <h3>Courses</h3>
+  <dl>
+    {% for c in entries.courses %}
+    <div class="entry">
+      <dt>{{ c.start }} &ndash; {{ c.end }}</dt>
+      <dd>{{ c.title }} &ndash; {{ c.institution }}</dd>
+    </div>
+    {% endfor %}
+  </dl>
+
+  <h3>Supervision</h3>
+  <ul>
+    {% for s in entries.supervision %}
+    <li>{{ s.count }} {{ s.kind }}</li>
+    {% endfor %}
+  </ul>
+</section>

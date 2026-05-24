@@ -1,0 +1,62 @@
+courses:
+  - id: quantum-hardware-padua-2024
+    start: Mar 2024
+    end: Jun 2024
+    title: Introduction to Quantum Hardware
+    institution: Department of Physics, University of Padua
+    tags: [padua]
+
+  - id: qip1-eth-2023
+    start: Sep 2023
+    end: Dec 2023
+    title: Quantum Information Processing 1
+    institution: Department of Physics, ETH Zurich
+    tags: [eth]
+
+  - id: trapped-ion-eth-2023
+    start: Mar 2023
+    end: Jun 2023
+    title: Trapped-ion physics
+    institution: Department of Physics, ETH Zurich
+    tags: [eth]
+
+  - id: physik3-eth-2022
+    start: Sep 2022
+    end: Feb 2023
+    title: Physik 3
+    institution: Department of Physics, ETH Zurich
+    tags: [eth]
+
+  - id: physikpraktikum-eth-2021
+    start: Sep 2021
+    end: Sep 2022
+    title: Physikpraktikum 3 + 4
+    institution: Department of Physics, ETH Zurich
+    tags: [eth]
+
+  - id: physics-lab-2-trento-2019
+    start: Sep 2019
+    end: Mar 2020
+    title: Physics Lab 2
+    institution: Department of Physics, University of Trento
+    tags: [trento]
+
+  - id: physics-1-trento-2019
+    start: Mar 2019
+    end: Sep 2019
+    title: Physics 1
+    institution: Department of Physics, University of Trento
+    tags: [trento]
+
+  - id: physics-1-dicam-2016
+    start: Mar 2016
+    end: Sep 2016
+    title: Physics 1
+    institution: Department of Civil, Environmental and Mechanical Engineering (DICAM), University of Trento
+    tags: [trento]
+
+supervision:
+  - count: 2
+    kind: semester project students
+  - count: 5
+    kind: master project students

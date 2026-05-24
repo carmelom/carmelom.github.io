@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Carmelo Mordini{% endblock %}</title>
+  <link rel="stylesheet" href="/css/pico.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/academicons/css/academicons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body data-page="{{ page }}">
+  {% if not for_pdf %}
+  <header class="site-header">
+    <nav>
+      <ul><li><a href="/" class="site-name"><strong>Carmelo Mordini</strong></a></li></ul>
+      <ul>
+        <li><a href="/"{% if page == 'home' %} aria-current="page"{% endif %}>Home</a></li>
+        <li><a href="/cv/"{% if page == 'cv' %} aria-current="page"{% endif %}>CV</a></li>
+      </ul>
+    </nav>
+  </header>
+  {% endif %}
+
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  {% if not for_pdf %}
+  <footer class="site-footer">
+    <small>&copy; Carmelo Mordini &middot; <a href="https://github.com/carmelom/carmelom.github.io">source on GitHub</a></small>
+  </footer>
+  {% endif %}
+</body>
+</html>

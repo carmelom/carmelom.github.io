@@ -1,0 +1,70 @@
+name: Build and deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+
+      - name: Install WeasyPrint system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libpango-1.0-0 libpangoft2-1.0-0 \
+            libharfbuzz0b libfontconfig1 libcairo2 \
+            fonts-dejavu
+
+      - name: Sync Python environment
+        run: uv sync --frozen
+
+      - name: Build site
+        run: uv run python build.py
+
+      - name: Build CV PDFs (all profiles)
+        run: uv run python build.py --all-profiles
+
+      - name: Upload CV PDFs as workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv-pdfs
+          path: site/cv*.pdf
+          if-no-files-found: warn
+
+      - name: Strip PDFs from Pages payload
+        run: rm -f site/cv*.pdf
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

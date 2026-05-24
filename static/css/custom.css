@@ -1,0 +1,236 @@
+/* ============================================================
+   custom.css — carmelom.github.io
+   Layered on top of Pico.css (classless build).
+   Principle: the /cv page IS the print preview.
+   ============================================================ */
+
+:root {
+  --max-cv-width: 46rem;
+}
+
+/* ---------- site chrome: header & footer ------------------- */
+
+.site-header {
+  border-bottom: 1px solid var(--pico-muted-border-color);
+  padding: 0.6rem var(--pico-spacing);
+  margin-bottom: 1.5rem;
+}
+
+.site-header nav {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.site-header nav a {
+  text-decoration: none;
+}
+
+.site-header nav a[aria-current="page"] {
+  font-weight: bold;
+}
+
+.site-name { color: inherit; }
+
+.site-footer {
+  border-top: 1px solid var(--pico-muted-border-color);
+  padding: 1rem var(--pico-spacing);
+  margin-top: 3rem;
+  text-align: center;
+  color: var(--pico-muted-color);
+}
+
+.site-footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* ---------- landing page ----------------------------------- */
+
+body[data-page="home"] main {
+  max-width: 50rem;
+}
+
+.profile {
+  float: right;
+  width: 220px;
+  margin: 0 0 1rem 1.25rem;
+  border-radius: 4px;
+}
+
+@media (max-width: 640px) {
+  .profile {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem;
+    width: 60%;
+    max-width: 220px;
+  }
+}
+
+.current-role p {
+  margin-bottom: 1.25rem;
+}
+
+.contact {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.contact li {
+  margin: 0.25rem 0;
+}
+
+.contact a {
+  text-decoration: none;
+}
+
+.contact i {
+  display: inline-block;
+  width: 1.5em;
+  text-align: center;
+  margin-right: 0.4em;
+}
+
+.bio p {
+  margin-bottom: 1rem;
+}
+
+.cv-cta {
+  margin-top: 2rem;
+}
+
+/* ---------- CV page: WYSIWYG print layout ------------------ */
+
+body[data-page="cv"] {
+  background: var(--pico-background-color);
+}
+
+body[data-page="cv"] main {
+  max-width: var(--max-cv-width);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.cv h1 {
+  margin-bottom: 0.5rem;
+}
+
+.cv h2 {
+  margin-top: 1.8rem;
+  margin-bottom: 0.5rem;
+  border-top: 1px solid var(--pico-muted-border-color);
+  padding-top: 0.6rem;
+  font-size: 1.3rem;
+}
+
+.cv h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.05rem;
+}
+
+.cv section { margin-bottom: 1rem; }
+
+.cv dl { margin: 0; }
+
+.cv dt {
+  font-weight: bold;
+  margin-top: 0.4rem;
+}
+
+.cv dd {
+  margin: 0 0 0.6rem 0;
+  padding-left: 0;
+}
+
+.cv .entry {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.cv ul.topics {
+  margin: 0.3rem 0 0.2rem 0;
+  padding-left: 1.2rem;
+}
+
+.cv ul.topics li {
+  margin: 0;
+}
+
+.cv ol.publications {
+  padding-left: 1.4rem;
+}
+
+.cv ol.publications li {
+  margin-bottom: 0.8rem;
+}
+
+.cv .pub-note {
+  color: var(--pico-muted-color);
+}
+
+/* CV contact list inline on the CV page (more compact) */
+body[data-page="cv"] .contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9em;
+}
+
+/* ---------- print rules: minimal, since screen ≈ paper ----- */
+
+@page {
+  size: A4;
+  margin: 1.8cm 1.6cm 2.0cm 1.6cm;
+  @bottom-right {
+    content: "Carmelo Mordini — CV — " counter(page) " / " counter(pages);
+    font-size: 8pt;
+    color: #666;
+  }
+}
+
+@page :first {
+  margin-top: 2.0cm;
+}
+
+@media print {
+  .site-header,
+  .site-footer { display: none !important; }
+
+  body, body[data-page="cv"] {
+    background: #fff;
+    color: #000;
+    font-size: 10pt;
+    line-height: 1.35;
+  }
+
+  main, body[data-page="cv"] main {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  .cv h2 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .cv h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .cv .entry {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  section#publications {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  /* icon fonts can be unreliable under WeasyPrint */
+  .fa, .ai { display: none; }
+}

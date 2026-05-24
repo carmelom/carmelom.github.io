@@ -1,0 +1,16 @@
+<section id="education">
+  <h2>Education</h2>
+  <dl>
+    {% for e in entries %}
+    <div class="entry">
+      <dt>{{ e.start }}{% if e.end and e.end != e.start %} &ndash; {{ e.end }}{% endif %}</dt>
+      <dd>
+        <strong>{{ e.degree }}</strong> &ndash; {{ e.institution }}
+        {% if e.thesis %}<br>Thesis title: {{ e.thesis }}{% endif %}
+        {% if e.thesis_url %}<br><a href="{{ e.thesis_url }}">{{ e.thesis_url }}</a>{% endif %}
+        {% if e.date %}<br>Date: {{ e.date }}{% endif %}
+      </dd>
+    </div>
+    {% endfor %}
+  </dl>
+</section>

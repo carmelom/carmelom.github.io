@@ -1,0 +1,9 @@
+name: default
+tagline: Experimental quantum physicist
+sections:
+  - id: education
+  - id: career
+  - id: teaching
+  - id: publications
+  - id: conferences
+  - id: outreach

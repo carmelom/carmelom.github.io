@@ -1,0 +1,14 @@
+<section id="outreach">
+  <h2>Outreach and scientific events</h2>
+  <dl>
+    {% for e in entries %}
+    <div class="entry">
+      <dt>{{ e.date or (e.start ~ " – " ~ e.end) }}</dt>
+      <dd>
+        {{ e.title }}
+        {% if e.url %}<br><a href="{{ e.url }}">{{ e.url }}</a>{% endif %}
+      </dd>
+    </div>
+    {% endfor %}
+  </dl>
+</section>

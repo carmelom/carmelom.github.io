@@ -1,0 +1,20 @@
+<section id="publications">
+  <h2>Publications</h2>
+  <ol class="publications">
+    {% for p in entries %}
+    <li class="entry" id="pub-{{ p.id }}">
+      {% if p.notes %}<em class="pub-note">{{ p.notes }}</em><br>{% endif %}
+      <strong>({{ p.year }})</strong> {{ p.authors | join_authors }}.<br>
+      {{ p.title }}{% if p.venue or p.ref %}.{% endif %}
+      {% if p.venue %} <em>{{ p.venue }}</em>{% endif %}
+      {%- if p.ref %} {{ p.ref }}{% endif -%}
+      {%- if p.venue or p.ref %},{% endif %}
+      {% if p.doi %} <a href="{{ p.doi | doi_url }}">{{ p.doi }}</a>{% endif %}
+      {%- if p.doi and p.arxiv %} &ndash;{% endif %}
+      {% if p.arxiv %} <a href="{{ p.arxiv | arxiv_url }}">arXiv:{{ p.arxiv }}</a>{% endif %}
+      {% if p.url %}<br><a href="{{ p.url }}">{{ p.url }}</a>{% endif %}
+      {% if p.isbn %}<br>ISBN: {{ p.isbn }}{% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+</section>

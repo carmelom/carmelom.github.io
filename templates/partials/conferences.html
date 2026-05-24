@@ -1,0 +1,18 @@
+<section id="conferences">
+  <h2>Conferences and seminars</h2>
+  <dl>
+    {% for e in entries %}
+    <div class="entry">
+      <dt>{{ e.start }}{% if e.end and e.end != e.start %} &ndash; {{ e.end }}{% endif %}</dt>
+      <dd>
+        <strong>{{ e.title }}</strong> &ndash; {{ e.location }}{% if e.format %} &ndash; <em>{{ e.format }}</em>{% endif %}
+        {% if e.organizers %}<br>Organizers: {{ e.organizers }}{% endif %}
+        {% if e.contribution %}<br>Contribution: {{ e.contribution }}{% if e.contribution_detail %} {{ e.contribution_detail }}{% endif %}{% endif %}
+        {% if e.urls %}
+          {% for u in e.urls %}<br><a href="{{ u }}">{{ u }}</a>{% endfor %}
+        {% endif %}
+      </dd>
+    </div>
+    {% endfor %}
+  </dl>
+</section>

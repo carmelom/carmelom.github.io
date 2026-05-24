@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Carmelo Mordini</h1>
+  <img class="profile" src="/images/profile-sketch-low.jpg" alt="Profile sketch of Carmelo Mordini">
+
+  {% if current %}
+  {% include "partials/current-role.html" %}
+  {% endif %}
+
+  {% include "partials/contact.html" %}
+
+  <div class="bio">
+    {{ bio | markdown | safe }}
+  </div>
+
+  <p class="cv-cta"><a href="/cv/" role="button" class="secondary">View full CV &rarr;</a></p>
+{% endblock %}

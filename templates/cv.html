@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Carmelo Mordini &mdash; CV{% endblock %}
+{% block content %}
+  <article class="cv">
+    <h1>Carmelo Mordini</h1>
+    {% include "partials/contact.html" %}
+
+    {% for s in sections %}
+      {% with entries = s.entries %}
+        {% include "partials/" ~ s.id ~ ".html" %}
+      {% endwith %}
+    {% endfor %}
+  </article>
+{% endblock %}
