@@ -1,0 +1,18 @@
+<section id="teaching">
+  <h2>{% include "partials/_sigil.html" %}<span>Teaching</span></h2>
+
+  <h3>Courses</h3>
+  {% for c in entries.courses %}
+  <div class="entry">
+    <div class="date"><span>{{ c.start }}</span>{% if c.end and c.end != c.start %}<span>{{ c.end }}</span>{% endif %}</div>
+    <div class="body">{{ c.title }} &ndash; {{ c.institution }}</div>
+  </div>
+  {% endfor %}
+
+  <h3>Supervision</h3>
+  <ul class="supervision">
+    {% for s in entries.supervision %}
+    <li>{{ s.count }} {{ s.kind }}</li>
+    {% endfor %}
+  </ul>
+</section>

@@ -1,0 +1,247 @@
+- id: mordini-multizone-2024
+  year: 2024
+  authors:
+    - C. Mordini
+    - A. R. Vasquez
+    - Y. Motohashi
+    - M. Müller
+    - M. Malinowski
+    - C. Zhang
+    - K. K. Mehta
+    - D. Kienzler
+    - J. P. Home
+  title: Multi-zone trapped-ion qubit control in an integrated photonics QCCD device
+  arxiv: "2401.18056"
+  tags: [trapped-ions, eth, integrated-photonics]
+
+- id: lancellotti-low-excitation-2023
+  year: 2023
+  authors:
+    - F. Lancellotti
+    - S. Welte
+    - M. Simoni
+    - C. Mordini
+    - T. Behrle
+    - B. de Neeve
+    - M. Marinelli
+    - V. Negnevitsky
+    - J. P. Home
+  title: Low-excitation transport and separation of high-mass-ratio mixed-species ion chains
+  arxiv: "2312.14006"
+  tags: [trapped-ions, eth]
+
+- id: mehta-iontrap-qc-2023
+  year: 2023
+  authors:
+    - K. K. Mehta
+    - A. R. Vasquez
+    - C. Mordini
+    - G. Beck
+    - M. Malinowski
+    - M. Stadler
+    - C. Zhang
+    - D. Kienzler
+    - J. P. Home
+  title: Ion trap quantum computing using integrated photonics
+  venue: "Integrated Optics: Devices, Materials, and Technologies XXVII"
+  ref: "124240I"
+  doi: 10.1117/12.2655382
+  tags: [trapped-ions, eth, integrated-photonics]
+
+- id: vasquez-quadrupole-2023
+  year: 2023
+  authors:
+    - A. R. Vasquez
+    - C. Mordini
+    - C. Vérnière
+    - M. Stadler
+    - M. Malinowski
+    - C. Zhang
+    - D. Kienzler
+    - K. K. Mehta
+    - J. P. Home
+  title: Control of an atomic quadrupole transition in a phase-stable standing wave
+  venue: Phys. Rev. Lett.
+  ref: "130: 133201"
+  doi: 10.1103/PhysRevLett.130.133201
+  arxiv: "2210.02597"
+  tags: [trapped-ions, eth, integrated-photonics]
+
+- id: wolswijk-order-parameter-2022
+  year: 2022
+  authors:
+    - L. Wolswijk
+    - C. Mordini
+    - A. Farolfi
+    - D. Trypogeorgos
+    - F. Dalfovo
+    - A. Zenesini
+    - G. Ferrari
+    - G. Lamporesi
+  title: Measurement of the order parameter and its spatial fluctuations across Bose-Einstein condensation
+  venue: Phys. Rev. A
+  ref: "105: 033316"
+  doi: 10.1103/PhysRevA.105.033316
+  arxiv: "2201.08569"
+  notes: PRA Editor's suggestion
+  tags: [cold-atoms, trento]
+
+- id: vasquez-qim-2021
+  year: 2021
+  authors:
+    - A. R. Vasquez
+    - C. Mordini
+    - C. Zhang
+    - M. Malinowski
+    - D. Kienzler
+    - K. K. Mehta
+    - J. P. Home
+  title: Ion Qubit Control in a Passively Phase-Stable Optical Standing Wave
+  venue: Quantum Information and Measurement VI 2021
+  doi: 10.1364/QIM.2021.F2B.6
+  tags: [trapped-ions, eth]
+
+- id: farolfi-torque-domain-walls-2021
+  year: 2021
+  authors:
+    - A. Farolfi
+    - A. Zenesini
+    - D. Trypogeorgos
+    - C. Mordini
+    - A. Gallemì
+    - A. Roy
+    - A. Recati
+    - G. Lamporesi
+    - G. Ferrari
+  title: Quantum-torque-induced breaking of magnetic domain walls in ultracold gases
+  venue: Nature Physics
+  ref: "17: 1359–1363"
+  doi: 10.1038/s41567-021-01369-y
+  arxiv: "2011.04271"
+  tags: [cold-atoms, trento]
+
+- id: mordini-singleshot-2020
+  year: 2020
+  authors:
+    - C. Mordini
+    - D. Trypogeorgos
+    - L. Wolswijk
+    - G. Lamporesi
+    - G. Ferrari
+  title: Single-shot reconstruction of the density profile of a dense atomic gas
+  venue: Opt. Express
+  ref: "28 (20): 29408–29418"
+  doi: 10.1364/OE.397567
+  arxiv: "2005.05674"
+  tags: [cold-atoms, trento]
+
+- id: mordini-canonical-eos-2020
+  year: 2020
+  authors:
+    - C. Mordini
+    - D. Trypogeorgos
+    - A. Farolfi
+    - L. Wolswijk
+    - S. Stringari
+    - G. Lamporesi
+    - G. Ferrari
+  title: Measurement of the Canonical Equation of State of a Weakly Interacting 3D Bose Gas
+  venue: Phys. Rev. Lett.
+  ref: "125: 150404"
+  doi: 10.1103/PhysRevLett.125.150404
+  arxiv: "2003.13627"
+  tags: [cold-atoms, trento]
+
+- id: farolfi-magnetic-solitons-2020
+  year: 2020
+  authors:
+    - A. Farolfi
+    - D. Trypogeorgos
+    - C. Mordini
+    - G. Lamporesi
+    - G. Ferrari
+  title: Observation of Magnetic Solitons in Two-Component Bose-Einstein Condensates
+  venue: Phys. Rev. Lett.
+  ref: "125: 030401"
+  doi: 10.1103/PhysRevLett.125.030401
+  arxiv: "1912.10513"
+  notes: PRL Editor's suggestion — Featured in Physics
+  tags: [cold-atoms, trento]
+
+- id: fava-spin-superfluidity-2018
+  year: 2018
+  authors:
+    - E. Fava
+    - T. Bienaimè
+    - C. Mordini
+    - G. Colzi
+    - C. Qu
+    - S. Stringari
+    - G. Lamporesi
+    - G. Ferrari
+  title: Observation of Spin Superfluidity in a Bose Gas Mixture
+  venue: Phys. Rev. Lett.
+  ref: "120 (17): 170401"
+  doi: 10.1103/PhysRevLett.120.170401
+  arxiv: "1708.03923"
+  tags: [cold-atoms, trento]
+
+- id: colzi-hybrid-trap-2018
+  year: 2018
+  authors:
+    - G. Colzi
+    - E. Fava
+    - M. Barbiero
+    - C. Mordini
+    - G. Lamporesi
+    - G. Ferrari
+  title: Production of large Bose-Einstein condensates in a magnetic-shield-compatible hybrid trap
+  venue: Phys. Rev. A
+  ref: "97 (5): 053625"
+  doi: 10.1103/PhysRevA.97.053625
+  arxiv: "1803.08814"
+  tags: [cold-atoms, trento]
+
+- id: dalfovo-vortex-filaments-2018
+  year: 2018
+  authors:
+    - F. Dalfovo
+    - Russell N. Bisset
+    - C. Mordini
+    - G. Lamporesi
+    - G. Ferrari
+  title: Optical Visibility and Core Structure of Vortex Filaments in a Bosonic Superfluid
+  venue: J. Exp. Theor. Phys.
+  ref: "127 (5): 804–811"
+  doi: 10.1134/S1063776118110018
+  arxiv: "1804.03017"
+  tags: [cold-atoms, trento]
+
+- id: mordini-ipsp-2017
+  year: 2017
+  authors:
+    - C. Mordini
+    - M. Zanoli
+  title: "Proceedings of the event IPSP2017: Industrial Problem Solving with Physics – 17-22/07/2017 – University of Trento"
+  isbn: 978-88-8443-787-7
+  url: https://event.unitn.it/ipsp2021/IPSP2017_proceedings_ebook.pdf
+  tags: [trento, organization]
+
+- id: bienaime-spin-dipole-2016
+  year: 2016
+  authors:
+    - T. Bienaimè
+    - E. Fava
+    - G. Colzi
+    - C. Mordini
+    - S. Serafini
+    - C. Qu
+    - S. Stringari
+    - G. Lamporesi
+    - G. Ferrari
+  title: Spin-dipole oscillation and polarizability of a binary Bose-Einstein condensate near the miscible-immiscible phase transition
+  venue: Phys. Rev. A
+  ref: "94 (6): 063652"
+  doi: 10.1103/PhysRevA.94.063652
+  arxiv: "1607.04574"
+  tags: [cold-atoms, trento]

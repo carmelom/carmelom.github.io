@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en"{% if for_pdf %} data-theme="light"{% endif %}>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Carmelo Mordini{% endblock %}</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  {% if not for_pdf %}
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fontsource/ibm-plex-sans@5/files/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fontsource/ibm-plex-serif@5/files/ibm-plex-serif-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') {
+          document.documentElement.setAttribute('data-theme', t);
+        }
+      } catch (e) {}
+    })();
+  </script>
+  {% endif %}
+  <link rel="stylesheet" href="/css/pico.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body data-page="{{ page }}">
+  {% if not for_pdf %}
+  <header class="site-header">
+    <nav>
+      <ul>
+        <li>
+          <a href="/" class="site-name">
+            {% include "partials/_sigil.html" %}
+            <strong>Carmelo Mordini</strong>
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li><a href="/"{% if page == 'home' %} aria-current="page"{% endif %}>Home</a></li>
+        <li><a href="/cv/"{% if page == 'cv' %} aria-current="page"{% endif %}>CV</a></li>
+        <li>
+          <button type="button" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <i class="fa fa-moon-o theme-icon-dark" aria-hidden="true"></i>
+            <i class="fa fa-sun-o theme-icon-light" aria-hidden="true"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  {% endif %}
+
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  {% if not for_pdf %}
+  <footer class="site-footer">
+    <small>&copy; Carmelo Mordini &middot; <a href="https://github.com/carmelom/carmelom.github.io">source on GitHub</a></small>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.querySelector('.theme-toggle');
+      if (!btn) return;
+      function current() {
+        var t = document.documentElement.getAttribute('data-theme');
+        if (t === 'light' || t === 'dark') return t;
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      btn.addEventListener('click', function () {
+        var next = current() === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+      });
+    })();
+  </script>
+  {% endif %}
+</body>
+</html>

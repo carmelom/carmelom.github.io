@@ -1,0 +1,8 @@
+<section class="current-role">
+  <p>
+    {{ current.role }} in the <a href="https://quantum.dfa.unipd.it/">{{ current.group }}</a><br>
+    {{ current.institution }}<br>
+    Project: {{ current.project }}{% if current.funding %}<br>
+    {{ current.funding }}{% endif %}
+  </p>
+</section>

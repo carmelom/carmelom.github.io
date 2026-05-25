@@ -1,0 +1,26 @@
+- id: nacht-der-physik-2022
+  date: Jun 2022
+  title: Participation in the Nacht der Physik outreach event
+  url: https://www.phys.ethz.ch/de/news-und-veranstaltungen/nacht-der-physik-2022.html
+  tags: [eth]
+
+- id: tiqit-2020
+  date: Mar 2020
+  title: >-
+    Collaboration in the Trento session of the orientation and outreach event TIQIT 2020 organized
+    by the Italian Association of Physics Students (AISF)
+  url: http://ai-sf.it/tiqit20/
+  tags: [trento]
+
+- id: ipsp-2017
+  start: Feb 2017
+  end: Jun 2017
+  title: "Organization of the technology transfer event IPSP - Industrial Problem Solving with Physics, 4th edition"
+  url: https://www.unitn.it/archivio/events/ipsp2017.html
+  tags: [trento, organization]
+
+- id: phys-phd-workshop-2016
+  date: Nov 2016
+  title: Organization of the Physics PhD Workshop
+  url: http://www.science.unitn.it/~dottorato/wiki/index.php?n=WorkShop16-17.WorkShop16-17
+  tags: [trento, organization]

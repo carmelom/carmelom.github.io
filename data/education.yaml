@@ -1,0 +1,31 @@
+- id: phd-trento-2019
+  start: 2015
+  end: 2019
+  degree: PhD in Physics
+  institution: University of Trento
+  thesis: >-
+    Measurement of the density profile of quantized vortices and of the equation
+    of state in a 3D interacting Bose gas
+  thesis_url: http://eprints-phd.biblio.unitn.it/3728/
+  date: "21/06/2019"
+
+- id: snsp-licenza-2016
+  start: 2010
+  end: 2015
+  degree: Diploma di Licenza
+  institution: Scuola Normale Superiore, Pisa
+  date: "19/12/2016"
+
+- id: msc-pisa-2015
+  start: 2013
+  end: 2015
+  degree: Master degree in Physics
+  institution: University of Pisa
+  date: "21/10/2015"
+
+- id: bsc-pisa-2013
+  start: 2011
+  end: 2013
+  degree: Bachelor degree in Physics
+  institution: University of Pisa
+  date: "25/07/2013"

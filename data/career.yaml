@@ -1,0 +1,38 @@
+- id: padua-rtda-2024
+  start: Jan 2024
+  end: null
+  role: Ricercatore (RTDA)
+  group: Quantum Information and Matter Group
+  institution: University of Padua
+  project: Development of an ion trap experiment for quantum computing and simulation
+  funding: Within the PNRR project "National Centre for HPC, Big Data and Quantum Computing" – Spoke 10
+  current: true
+  tags: [trapped-ions, padua]
+
+- id: eth-postdoc-2021
+  start: Jan 2021
+  end: Dec 2023
+  role: Postdoc
+  group: Trapped Ion Quantum Information Group (TIQI)
+  institution: ETH Zurich
+  project: Integrated photonics for trapped-ion quantum computing
+  supervisor: Jonathan Home
+  topics:
+    - Ion trapping in surface traps
+    - Integrated photonics
+    - Ion transport
+  tags: [trapped-ions, eth, integrated-photonics]
+
+- id: trento-postdoc-2019
+  start: Sep 2019
+  end: Jan 2021
+  role: Postdoc
+  group: Ultracold atomic gases laboratory of the BEC Center
+  institution: University of Trento
+  project: Experimental investigation of equilibrium and non-equilibrium properties of Bose–Einstein condensates
+  supervisor: Giacomo Lamporesi
+  topics:
+    - Thermodynamics of Bose gases
+    - Non-equilibrium dynamics of the BEC transition
+    - Spinor condensates
+  tags: [cold-atoms, trento]

@@ -1,0 +1,185 @@
+- id: eccti-2024
+  start: "07/07/2024"
+  end: "12/07/2024"
+  title: ECCTI 2024 - Early Career Conference in Trapped Ions
+  location: Innsbruck, Austria
+  contribution: poster
+  urls:
+    - https://indico.cern.ch/event/1346005/
+  tags: [trapped-ions]
+
+- id: qcs-workshop-venezia-2023
+  start: "11/10/2023"
+  end: "13/10/2023"
+  title: Quantum Computing and Simulation Workshop
+  location: Venezia, Italy
+  contribution: poster
+  urls:
+    - https://indico.dfa.unipd.it/event/818/page/56-venue
+  tags: [trapped-ions, padua]
+
+- id: ecti-2023
+  start: "25/09/2023"
+  end: "29/09/2023"
+  title: ECTI 2023 - 7th European Conference on Trapped Ions
+  location: Schloss Bückeburg, Germany
+  contribution: poster
+  urls:
+    - https://konferenz.uni-hannover.de/event/79/
+  tags: [trapped-ions]
+
+- id: ieee-qweek-2023
+  start: "17/09/2023"
+  end: "22/09/2023"
+  title: IEEE Quantum Week 2023
+  location: Bellevue, Washington, USA
+  contribution: invited talk
+  contribution_detail: at "Emerging Technologies for Scaling Trapped-ion Quantum Systems Workshop"
+  urls:
+    - https://qce.quantum.ieee.org/2023/
+    - https://www.sandia.gov/quantum/trapped-ion-workshop/
+  tags: [trapped-ions, invited]
+
+- id: qsg-workshop-2023
+  start: "02/05/2023"
+  end: "05/05/2023"
+  title: Quantum Science Generation Workshop 2023
+  location: ECT*, Trento
+  contribution: talk
+  urls:
+    - https://indico.ectstar.eu/event/162/
+  tags: [trapped-ions]
+
+- id: ieee-qweek-2022
+  start: "18/09/2022"
+  end: "23/09/2022"
+  title: IEEE Quantum Week 2022
+  location: Broomfield, Colorado, USA
+  contribution: poster
+  urls:
+    - https://qce.quantum.ieee.org/2022
+  tags: [trapped-ions]
+
+- id: eccti-2022
+  start: "26/06/2022"
+  end: "01/07/2022"
+  title: ECCTI 2022 - Early Career Conference in Trapped Ions
+  location: CERN, Geneva
+  organizers: Organized within the COST action TIPICQA
+  contribution: talk
+  urls:
+    - https://indico.cern.ch/event/991843/
+  tags: [trapped-ions]
+
+- id: eqtc-2021
+  start: "29/11/2021"
+  end: "02/12/2021"
+  title: EQTC 2021 - European Quantum Technologies Conference
+  location: National University of Ireland, Galway
+  format: online
+  organizers: European Quantum Flagship and Irish Centre for High-End Computing
+  contribution: talk
+  urls:
+    - https://www.eqtc.org/
+  tags: [trapped-ions]
+
+- id: bologna-summer-school-2020
+  start: "20/07/2020"
+  title: Summer School on Physical Sensing and Processing
+  location: University of Bologna
+  format: online
+  organizers: D. Bonacorsi, N. Lanconelli, E. Leonessi (University of Bologna)
+  urls:
+    - https://site.unibo.it/school-physical-sensing-and-processing/en
+  tags: [cold-atoms]
+
+- id: quantum-mixtures-trento-2019
+  start: "15/07/2019"
+  title: Workshop on Quantum Mixtures
+  location: University of Trento
+  organizers: F. Dalfovo, S. Giorgini, A. Recati (University of Trento), C. Salomon (LKB, Paris), Tin-Lun Ho (Ohio State University)
+  urls:
+    - http://bec.science.unitn.it/qmix2019/
+  tags: [cold-atoms]
+
+- id: florence-trento-pisa-2018
+  start: "15/11/2018"
+  end: "17/11/2018"
+  title: Florence - Trento meeting on Quantum gases
+  location: Scuola Normale Superiore di Pisa, Italy
+  organizers: BEC Center, Trento, and LENS, Florence
+  contribution: talk
+  urls:
+    - https://bec.science.unitn.it/BEC/imgs/pisa-program.jpg
+  tags: [cold-atoms]
+
+- id: euroscipy-2018
+  start: "28/08/2018"
+  end: "01/09/2018"
+  title: EuroSciPy 2018
+  location: Fondazione Bruno Kessler, Trento
+  organizers: The EuroSciPy team
+  urls:
+    - https://www.euroscipy.org/2018/
+  tags: [cold-atoms]
+
+- id: icap-2018
+  start: "22/07/2018"
+  end: "27/07/2018"
+  title: ICAP 2018 – International Conference on Atomic Physics
+  location: University of Barcellona, Spain
+  organizers: University of Barcellona, ICFO – Institute for Photonic Sciences
+  contribution: poster
+  urls:
+    - http://icap2018.eu
+  tags: [cold-atoms]
+
+- id: bec2016-salerno
+  start: "31/08/2016"
+  end: "03/09/2016"
+  title: BEC2016 – Quantum gases and quantum coherence
+  location: University of Salerno, Italy
+  organizers: F. Chevy (ENS, Paris, Fr), R. Citro (UniSa, Salerno, Italy), G. Lamporesi (INO-CNR BEC, Italy)
+  contribution: poster
+  urls:
+    - http://bec2016.physics.unisa.it/
+  tags: [cold-atoms]
+
+- id: icqo-obergurgl-2016
+  start: "21/02/2016"
+  title: International Conference on Quantum Optics 2016
+  location: Obergurgl, Tirol, Austria
+  organizers: Hanns-Christoph Nägerl (University of Innsbruck)
+  urls:
+    - https://www.uibk.ac.at/th-physik/obergurgl2016/
+  tags: [cold-atoms]
+
+- id: ultracold-iqoqi-2015
+  start: "07/07/2015"
+  end: "09/07/2015"
+  title: Introductory Course on Ultracold Quantum Gases
+  location: Institute of Quantum Optics and Quantum Information (IQOQI), Innsbruck
+  organizers: Francesca Ferlaino, Rudolph Grimm (University of Innsbruck)
+  urls:
+    - https://www.uibk.ac.at/sp-physik/events/introductory_course_ultracold_quantum_gases_2015/index.html.en
+  tags: [cold-atoms]
+
+- id: cold-atoms-hep-2015
+  start: "22/06/2015"
+  end: "25/06/2015"
+  title: Cold atoms meet High Energy Physics
+  location: ECT*, Villazzano, Trento
+  organizers: Sandro Stringari (Università di Trento)
+  urls:
+    - https://www.ectstar.eu/workshops/cold-atoms-meet-high-energy-physics/
+  tags: [cold-atoms]
+
+- id: photon15-winter-school
+  start: "12/01/2015"
+  end: "23/01/2015"
+  title: International Winter School and Workshop on "Strongly correlated fluids of light and matter"
+  location: ECT*, Villazzano, Trento
+  organizers: Iacopo Carusotto (Università di Trento)
+  urls:
+    - http://www.science.unitn.it/~carusott/PHOTON15/index.html
+  tags: [cold-atoms]

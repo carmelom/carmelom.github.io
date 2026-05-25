@@ -1,1 +1,11 @@
+site/
 *.pdf
+__pycache__/
+*.pyc
+.venv/
+.venv-linux/
+.env
+.python-version
+
+.playwright-mcp/
+*.png

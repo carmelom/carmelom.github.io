@@ -1,0 +1,12 @@
+{%- set contact_icons = {
+  'email':    'fa fa-envelope',
+  'scholar':  'ai ai-google-scholar',
+  'arxiv':    'ai ai-arxiv',
+  'github':   'fa fa-github',
+  'linkedin': 'fa fa-linkedin-square',
+} -%}
+<ul class="contact">
+  {% for c in contact %}
+  <li><a href="{{ c.href }}"><i class="{{ contact_icons.get(c.type, '') }}" aria-hidden="true"></i> {{ c.label }}</a></li>
+  {% endfor %}
+</ul>

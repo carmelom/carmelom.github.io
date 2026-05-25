@@ -1,0 +1,21 @@
+<section id="publications">
+  <h2>{% include "partials/_sigil.html" %}<span>Publications</span></h2>
+  {% for p in entries %}
+  <div class="entry" id="pub-{{ p.id }}">
+    <div class="date">{{ p.year }}</div>
+    <div class="body">
+      {% if p.notes %}<em class="pub-note">{{ p.notes }}</em><br>{% endif %}
+      {{ p.authors | join_authors }}.<br>
+      <strong>{{ p.title }}</strong>{% if p.venue or p.ref %}.{% endif %}
+      {% if p.venue %} <em>{{ p.venue }}</em>{% endif %}
+      {%- if p.ref %} {{ p.ref }}{% endif -%}
+      {%- if p.venue or p.ref %},{% endif %}
+      {% if p.doi %} <a href="{{ p.doi | doi_url }}" class="pub-id">{{ p.doi }}</a>{% endif %}
+      {%- if p.doi and p.arxiv %} &ndash;{% endif %}
+      {% if p.arxiv %} <a href="{{ p.arxiv | arxiv_url }}" class="pub-id">arXiv:{{ p.arxiv }}</a>{% endif %}
+      {% if p.url %}<br><a href="{{ p.url }}">{{ p.url }}</a>{% endif %}
+      {% if p.isbn %}<br>ISBN: {{ p.isbn }}{% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</section>

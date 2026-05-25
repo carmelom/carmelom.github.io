@@ -1,0 +1,16 @@
+<section id="conferences">
+  <h2>{% include "partials/_sigil.html" %}<span>Conferences and seminars</span></h2>
+  {% for e in entries %}
+  <div class="entry">
+    <div class="date"><span>{{ e.start }}</span>{% if e.end and e.end != e.start %}<span>{{ e.end }}</span>{% endif %}</div>
+    <div class="body">
+      <strong>{{ e.title }}</strong> &ndash; {{ e.location }}{% if e.format %} &ndash; <em>{{ e.format }}</em>{% endif %}
+      {% if e.organizers %}<br>Organizers: {{ e.organizers }}{% endif %}
+      {% if e.contribution %}<br>Contribution: {{ e.contribution }}{% if e.contribution_detail %} {{ e.contribution_detail }}{% endif %}{% endif %}
+      {% if e.urls %}
+        {% for u in e.urls %}<br><a href="{{ u }}">{{ u }}</a>{% endfor %}
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</section>

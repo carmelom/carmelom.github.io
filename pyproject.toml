@@ -1,0 +1,15 @@
+[project]
+name = "carmelom-site"
+version = "0"
+description = "Personal landing page + CV"
+requires-python = ">=3.12"
+dependencies = [
+    "jinja2",
+    "pyyaml",
+    "markdown",
+    "weasyprint",
+    "livereload",
+]
+
+[tool.uv]
+package = false
