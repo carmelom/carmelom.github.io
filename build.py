@@ -141,10 +141,13 @@ def render_site(env: Environment, data: dict, content: dict, profile: dict) -> N
         None,
     )
 
+    contact = data.get("contact", [])
+
     (OUT / "index.html").write_text(
         env.get_template("index.html").render(
             bio=content.get("bio", ""),
             current=current,
+            contact=contact,
             profile=profile,
             page="home",
         ),
@@ -156,6 +159,7 @@ def render_site(env: Environment, data: dict, content: dict, profile: dict) -> N
         env.get_template("cv.html").render(
             sections=sections,
             data=data,
+            contact=contact,
             profile=profile,
             page="cv",
         ),
@@ -198,6 +202,7 @@ def render_pdf(env: Environment, data: dict, profile: dict, out_path: Path) -> N
     html = env.get_template("cv.html").render(
         sections=sections,
         data=data,
+        contact=data.get("contact", []),
         profile=profile,
         page="cv",
         for_pdf=True,

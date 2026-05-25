@@ -1,0 +1,15 @@
+- type: email
+  href: "mailto:carmelo.mordini@gmail.com"
+  label: carmelo.mordini@gmail.com
+- type: scholar
+  href: "https://scholar.google.com/citations?user=x0dCLs0AAAAJ&hl=en"
+  label: Google Scholar
+- type: arxiv
+  href: "https://arxiv.org/a/mordini_c_1.html"
+  label: arXiv
+- type: github
+  href: "https://github.com/carmelom"
+  label: GitHub
+- type: linkedin
+  href: "https://www.linkedin.com/in/carmelo-mordini/"
+  label: LinkedIn
