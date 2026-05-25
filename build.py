@@ -24,7 +24,6 @@ CONTENT = ROOT / "content"
 PROFILES = ROOT / "profiles"
 TEMPLATES = ROOT / "templates"
 STATIC = ROOT / "static"
-ACADEMICONS = ROOT / "assets" / "academicons"
 OUT = ROOT / "site"
 
 
@@ -131,8 +130,6 @@ def copy_static() -> None:
     OUT.mkdir(exist_ok=True)
     if STATIC.exists():
         _copy_tree(STATIC, OUT)
-    if ACADEMICONS.exists():
-        _copy_tree(ACADEMICONS, OUT / "assets" / "academicons")
 
 
 # ---------- rendering ------------------------------------------------------
@@ -166,6 +163,34 @@ def render_site(env: Environment, data: dict, content: dict, profile: dict) -> N
     )
 
 
+def _site_url_fetcher(url, **kwargs):
+    """Map root-relative `file:///foo` URLs into the built ``site/`` tree.
+
+    WeasyPrint resolves ``<link href="/css/x.css">`` against the base URL's
+    *host*, not its path — which for a filesystem base_url means filesystem
+    root. This fetcher intercepts file:// URLs and re-roots them under OUT,
+    while letting CDN (https://) URLs pass through to the default fetcher.
+    """
+    from urllib.parse import urlparse, unquote
+
+    from weasyprint import default_url_fetcher
+
+    parsed = urlparse(url)
+    if parsed.scheme == "file":
+        local = OUT / unquote(parsed.path).lstrip("/")
+        if local.is_file():
+            mime = {
+                ".css": "text/css",
+                ".woff2": "font/woff2",
+                ".woff": "font/woff",
+                ".svg": "image/svg+xml",
+                ".png": "image/png",
+                ".jpg": "image/jpeg",
+            }.get(local.suffix.lower())
+            return {"file_obj": local.open("rb"), "mime_type": mime}
+    return default_url_fetcher(url, **kwargs)
+
+
 def render_pdf(env: Environment, data: dict, profile: dict, out_path: Path) -> None:
     from weasyprint import HTML
 
@@ -177,7 +202,11 @@ def render_pdf(env: Environment, data: dict, profile: dict, out_path: Path) -> N
         page="cv",
         for_pdf=True,
     )
-    HTML(string=html, base_url=str(OUT)).write_pdf(str(out_path))
+    HTML(
+        string=html,
+        base_url=str(OUT),
+        url_fetcher=_site_url_fetcher,
+    ).write_pdf(str(out_path))
 
 
 # ---------- public entry points --------------------------------------------

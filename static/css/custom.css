@@ -9,42 +9,42 @@
 
 @font-face {
   font-family: 'IBM Plex Sans';
-  src: url('/fonts/ibm-plex/IBMPlexSans-Regular.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/npm/@fontsource/ibm-plex-sans@5/files/ibm-plex-sans-latin-400-normal.woff2') format('woff2');
   font-weight: 400; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: 'IBM Plex Sans';
-  src: url('/fonts/ibm-plex/IBMPlexSans-Italic.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/npm/@fontsource/ibm-plex-sans@5/files/ibm-plex-sans-latin-400-italic.woff2') format('woff2');
   font-weight: 400; font-style: italic; font-display: swap;
 }
 @font-face {
   font-family: 'IBM Plex Sans';
-  src: url('/fonts/ibm-plex/IBMPlexSans-Medium.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/npm/@fontsource/ibm-plex-sans@5/files/ibm-plex-sans-latin-500-normal.woff2') format('woff2');
   font-weight: 500; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: 'IBM Plex Sans';
-  src: url('/fonts/ibm-plex/IBMPlexSans-SemiBold.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/npm/@fontsource/ibm-plex-sans@5/files/ibm-plex-sans-latin-600-normal.woff2') format('woff2');
   font-weight: 600; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: 'IBM Plex Mono';
-  src: url('/fonts/ibm-plex/IBMPlexMono-Regular.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/npm/@fontsource/ibm-plex-mono@5/files/ibm-plex-mono-latin-400-normal.woff2') format('woff2');
   font-weight: 400; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: 'IBM Plex Mono';
-  src: url('/fonts/ibm-plex/IBMPlexMono-Medium.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/npm/@fontsource/ibm-plex-mono@5/files/ibm-plex-mono-latin-500-normal.woff2') format('woff2');
   font-weight: 500; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: 'IBM Plex Serif';
-  src: url('/fonts/ibm-plex/IBMPlexSerif-Regular.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/npm/@fontsource/ibm-plex-serif@5/files/ibm-plex-serif-latin-400-normal.woff2') format('woff2');
   font-weight: 400; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: 'IBM Plex Serif';
-  src: url('/fonts/ibm-plex/IBMPlexSerif-Medium.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/npm/@fontsource/ibm-plex-serif@5/files/ibm-plex-serif-latin-500-normal.woff2') format('woff2');
   font-weight: 500; font-style: normal; font-display: swap;
 }
 

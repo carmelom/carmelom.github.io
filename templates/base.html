@@ -6,8 +6,8 @@
   <title>{% block title %}Carmelo Mordini{% endblock %}</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   {% if not for_pdf %}
-  <link rel="preload" href="/fonts/ibm-plex/IBMPlexSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/ibm-plex/IBMPlexSerif-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fontsource/ibm-plex-sans@5/files/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fontsource/ibm-plex-serif@5/files/ibm-plex-serif-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
   <script>
     (function () {
       try {
@@ -20,8 +20,8 @@
   </script>
   {% endif %}
   <link rel="stylesheet" href="/css/pico.min.css">
-  <link rel="stylesheet" href="/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/assets/academicons/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="/css/custom.css">
 </head>
 <body data-page="{{ page }}">
