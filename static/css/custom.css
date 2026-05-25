@@ -104,20 +104,20 @@
 /* ---------- base typography -------------------------------- */
 
 html {
-  font-size: 17px;
+  font-size: 16px;
 }
 
 body {
   font-family: var(--pico-font-family-sans-serif);
   font-feature-settings: "kern", "liga", "calt";
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 h1.page-title,
 .cv h1.page-title {
   font-family: 'IBM Plex Serif', Georgia, serif;
   font-weight: 500;
-  font-size: 2.25rem;
+  font-size: 2rem;
   line-height: 1.1;
   letter-spacing: -0.01em;
   margin: 0 0 0.75rem 0;
@@ -164,7 +164,7 @@ a:hover {
 
 .site-header nav a {
   color: var(--pico-muted-color);
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   font-weight: 400;
 }
 
@@ -186,7 +186,7 @@ a:hover {
 
 .site-name strong {
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.875rem;
 }
 
 .site-name .sigil {
@@ -325,8 +325,8 @@ main.container {
   margin: 0.25rem 0 1.75rem 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem 1.4rem;
-  font-size: 0.95rem;
+  gap: 0.4rem 1.2rem;
+  font-size: 0.875rem;
 }
 
 .contact li {
@@ -339,6 +339,7 @@ main.container {
   align-items: baseline;
   gap: 0.35rem;
   color: var(--pico-primary);
+  white-space: nowrap;
 }
 
 .contact a:hover {
@@ -354,8 +355,8 @@ main.container {
 /* ---------- CV page ---------------------------------------- */
 
 .cv {
-  font-size: 0.95rem;
-  line-height: 1.45;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 .cv h2 {
@@ -364,12 +365,12 @@ main.container {
   gap: 0.55rem;
   font-family: var(--pico-font-family-sans-serif);
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.1rem;
   letter-spacing: 0.05em;
   text-transform: none;
   border-top: 1px solid var(--pico-muted-border-color);
-  margin: 2.75rem 0 1.25rem 0;
-  padding-top: 1.5rem;
+  margin: 2rem 0 1rem 0;
+  padding-top: 1.25rem;
   color: var(--pico-color);
 }
 
@@ -383,7 +384,7 @@ main.container {
 .cv h3 {
   font-family: var(--pico-font-family-sans-serif);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin: 1.25rem 0 0.5rem 0;
   color: var(--pico-color);
   letter-spacing: 0;
@@ -397,7 +398,7 @@ main.container {
 
 .cv .entry {
   display: grid;
-  grid-template-columns: 5rem 1fr;
+  grid-template-columns: 4.5rem 1fr;
   gap: 0 1.25rem;
   margin-bottom: 1rem;
   break-inside: avoid;
@@ -406,13 +407,13 @@ main.container {
 
 .cv .entry .date {
   font-family: var(--pico-font-family-monospace);
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-variant-numeric: tabular-nums;
   color: var(--pico-muted-color);
   text-align: right;
   padding-top: 0.25em;
   letter-spacing: 0.01em;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 .cv .entry .date span {
@@ -557,7 +558,7 @@ main.container {
     background: #FFF;
     color: #000;
     font-size: 10pt;
-    line-height: 1.4;
+    line-height: 1.35;
   }
 
   main, main.container {
@@ -566,15 +567,15 @@ main.container {
   }
 
   .cv h1.page-title {
-    font-size: 22pt;
+    font-size: 20pt;
   }
 
   .cv h2 {
     break-after: avoid;
     page-break-after: avoid;
     font-size: 11pt;
-    margin-top: 1.6em;
-    padding-top: 0.8em;
+    margin-top: 1.4em;
+    padding-top: 0.7em;
   }
 
   .cv h3 {
@@ -586,11 +587,16 @@ main.container {
   .cv .entry {
     break-inside: avoid;
     page-break-inside: avoid;
-    grid-template-columns: 4.5rem 1fr;
+    grid-template-columns: 4rem 1fr;
   }
 
   .cv .entry .date {
-    font-size: 8.5pt;
+    font-size: 8pt;
+  }
+
+  .contact {
+    font-size: 9.5pt;
+    gap: 0.3rem 1.4rem;
   }
 
   section#publications {
