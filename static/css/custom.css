@@ -1,35 +1,232 @@
 /* ============================================================
    custom.css — carmelom.github.io
+   Refined contemporary minimal. IBM Plex throughout.
    Layered on top of Pico.css (classless build).
-   Principle: the /cv page IS the print preview.
+   The /cv page IS the print preview (WYSIWYG).
    ============================================================ */
 
-:root {
-  --max-cv-width: 46rem;
+/* ---------- fonts: IBM Plex (self-hosted woff2) ------------ */
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url('/fonts/ibm-plex/IBMPlexSans-Regular.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url('/fonts/ibm-plex/IBMPlexSans-Italic.woff2') format('woff2');
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url('/fonts/ibm-plex/IBMPlexSans-Medium.woff2') format('woff2');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url('/fonts/ibm-plex/IBMPlexSans-SemiBold.woff2') format('woff2');
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('/fonts/ibm-plex/IBMPlexMono-Regular.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('/fonts/ibm-plex/IBMPlexMono-Medium.woff2') format('woff2');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Serif';
+  src: url('/fonts/ibm-plex/IBMPlexSerif-Regular.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Serif';
+  src: url('/fonts/ibm-plex/IBMPlexSerif-Medium.woff2') format('woff2');
+  font-weight: 500; font-style: normal; font-display: swap;
 }
 
-/* ---------- site chrome: header & footer ------------------- */
+/* ---------- design tokens (override Pico) ------------------ */
 
-.site-header {
-  border-bottom: 1px solid var(--pico-muted-border-color);
-  padding: 0.6rem var(--pico-spacing);
-  margin-bottom: 1.5rem;
+:root,
+[data-theme="light"] {
+  --pico-background-color: #FAF9F6;
+  --pico-color: #1A1A1A;
+  --pico-h1-color: #1A1A1A;
+  --pico-h2-color: #1A1A1A;
+  --pico-h3-color: #1A1A1A;
+  --pico-muted-color: #6B6B6B;
+  --pico-muted-border-color: #E6E4DF;
+  --pico-primary: #2A7E7A;
+  --pico-primary-hover: #1F605C;
+  --pico-primary-underline: rgba(42, 126, 122, 0.4);
+  --pico-primary-focus: rgba(42, 126, 122, 0.25);
+
+  --pico-font-family-sans-serif: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  --pico-font-family-monospace: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --pico-font-family: var(--pico-font-family-sans-serif);
+
+  --max-page-width: 46rem;
 }
 
-.site-header nav {
-  max-width: 80rem;
-  margin: 0 auto;
+[data-theme="dark"] {
+  --pico-background-color: #0F1115;
+  --pico-color: #E4E4E4;
+  --pico-h1-color: #F2F2F2;
+  --pico-h2-color: #F2F2F2;
+  --pico-h3-color: #F2F2F2;
+  --pico-muted-color: #8A8F99;
+  --pico-muted-border-color: #232730;
+  --pico-primary: #6FB8B3;
+  --pico-primary-hover: #8FCCC7;
+  --pico-primary-underline: rgba(111, 184, 179, 0.4);
+  --pico-primary-focus: rgba(111, 184, 179, 0.25);
 }
 
-.site-header nav a {
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --pico-background-color: #0F1115;
+    --pico-color: #E4E4E4;
+    --pico-h1-color: #F2F2F2;
+    --pico-h2-color: #F2F2F2;
+    --pico-h3-color: #F2F2F2;
+    --pico-muted-color: #8A8F99;
+    --pico-muted-border-color: #232730;
+    --pico-primary: #6FB8B3;
+    --pico-primary-hover: #8FCCC7;
+    --pico-primary-underline: rgba(111, 184, 179, 0.4);
+    --pico-primary-focus: rgba(111, 184, 179, 0.25);
+  }
+}
+
+/* ---------- base typography -------------------------------- */
+
+html {
+  font-size: 17px;
+}
+
+body {
+  font-family: var(--pico-font-family-sans-serif);
+  font-feature-settings: "kern", "liga", "calt";
+  line-height: 1.55;
+}
+
+h1.page-title,
+.cv h1.page-title {
+  font-family: 'IBM Plex Serif', Georgia, serif;
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.75rem 0;
+}
+
+a {
+  color: var(--pico-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-thickness 0.15s ease, color 0.15s ease;
+}
+
+a:hover {
+  color: var(--pico-primary-hover);
+  text-decoration-thickness: 2px;
+}
+
+/* Links inside specific containers stay clean (no underline) */
+.site-header a,
+.site-name,
+.cv-cta a,
+.contact a,
+.cv h2 a {
   text-decoration: none;
 }
 
-.site-header nav a[aria-current="page"] {
-  font-weight: bold;
+/* ---------- site header & footer --------------------------- */
+
+.site-header {
+  border-bottom: 1px solid var(--pico-muted-border-color);
+  padding: 0.7rem 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
-.site-name { color: inherit; }
+.site-header nav {
+  max-width: var(--max-page-width);
+  margin: 0 auto;
+}
+
+.site-header nav ul {
+  padding: 0;
+}
+
+.site-header nav a {
+  color: var(--pico-muted-color);
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.site-header nav a:hover {
+  color: var(--pico-primary);
+}
+
+.site-header nav a[aria-current="page"] {
+  color: var(--pico-color);
+  font-weight: 500;
+}
+
+.site-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--pico-color);
+}
+
+.site-name strong {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.site-name .sigil {
+  color: var(--pico-primary);
+  width: 1.1em;
+  height: 1.1em;
+}
+
+.site-footer {
+  border-top: 1px solid var(--pico-muted-border-color);
+  padding: 1.25rem 1.5rem;
+  margin-top: 4rem;
+  text-align: center;
+  color: var(--pico-muted-color);
+  font-size: 0.85rem;
+}
+
+.site-footer small {
+  font-size: inherit;
+}
+
+.site-footer a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--pico-muted-border-color);
+}
+
+.site-footer a:hover {
+  color: var(--pico-primary);
+}
+
+/* ---------- main container --------------------------------- */
+
+main.container {
+  max-width: var(--max-page-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ---------- theme toggle ----------------------------------- */
 
 .theme-toggle {
   background: transparent;
@@ -68,65 +265,31 @@
   html:not([data-theme="light"]) .theme-toggle .theme-icon-light { display: inline-block; }
 }
 
-.site-footer {
-  border-top: 1px solid var(--pico-muted-border-color);
-  padding: 1rem var(--pico-spacing);
-  margin-top: 3rem;
-  text-align: center;
-  color: var(--pico-muted-color);
-}
-
-.site-footer a {
-  color: inherit;
-  text-decoration: underline;
-}
-
-/* ---------- landing page ----------------------------------- */
-
-body[data-page="home"] main {
-  max-width: 50rem;
-}
+/* ---------- homepage --------------------------------------- */
 
 .profile {
   float: right;
-  width: 220px;
-  margin: 0 0 1rem 1.25rem;
-  border-radius: 4px;
+  width: 140px;
+  margin: 0.3rem 0 1rem 1.5rem;
+  border-radius: 2px;
 }
 
-@media (max-width: 640px) {
-  .profile {
-    float: none;
-    display: block;
-    margin: 0 auto 1rem;
-    width: 60%;
-    max-width: 220px;
-  }
-}
-
-.current-role p {
+.current-role {
   margin-bottom: 1.25rem;
 }
 
-.contact {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1.5rem 0;
+.current-role p {
+  margin: 0;
+  color: var(--pico-muted-color);
+  line-height: 1.5;
 }
 
-.contact li {
-  margin: 0.25rem 0;
+.current-role a {
+  color: var(--pico-primary);
 }
 
-.contact a {
-  text-decoration: none;
-}
-
-.contact i {
-  display: inline-block;
-  width: 1.5em;
-  text-align: center;
-  margin-right: 0.4em;
+.bio {
+  margin-top: 1.5rem;
 }
 
 .bio p {
@@ -134,89 +297,220 @@ body[data-page="home"] main {
 }
 
 .cv-cta {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
-/* ---------- CV page: WYSIWYG print layout ------------------ */
-
-body[data-page="cv"] {
-  background: var(--pico-background-color);
+.cv-cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 500;
+  color: var(--pico-primary);
 }
 
-body[data-page="cv"] main {
-  max-width: var(--max-cv-width);
+.cv-cta a:hover {
+  color: var(--pico-primary-hover);
+}
+
+.cv-cta .sigil {
+  width: 0.9em;
+  height: 0.9em;
+}
+
+/* ---------- contact (inline horizontal) -------------------- */
+
+.contact {
+  list-style: none;
+  padding: 0;
+  margin: 0.25rem 0 1.75rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
   font-size: 0.95rem;
-  line-height: 1.4;
 }
 
-.cv h1 {
-  margin-bottom: 0.5rem;
+.contact li {
+  margin: 0;
+}
+
+.contact a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  color: var(--pico-primary);
+}
+
+.contact a:hover {
+  color: var(--pico-primary-hover);
+}
+
+.contact i {
+  width: 1.1em;
+  text-align: center;
+  font-size: 0.95em;
+}
+
+/* ---------- CV page ---------------------------------------- */
+
+.cv {
+  font-size: 0.95rem;
+  line-height: 1.45;
 }
 
 .cv h2 {
-  margin-top: 1.8rem;
-  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--pico-font-family-sans-serif);
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: none;
   border-top: 1px solid var(--pico-muted-border-color);
-  padding-top: 0.6rem;
-  font-size: 1.3rem;
+  margin: 2.75rem 0 1.25rem 0;
+  padding-top: 1.5rem;
+  color: var(--pico-color);
+}
+
+.cv h2 .sigil {
+  color: var(--pico-primary);
+  flex-shrink: 0;
+  width: 0.95em;
+  height: 0.95em;
 }
 
 .cv h3 {
-  margin-top: 1rem;
-  margin-bottom: 0.4rem;
-  font-size: 1.05rem;
+  font-family: var(--pico-font-family-sans-serif);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 1.25rem 0 0.5rem 0;
+  color: var(--pico-color);
+  letter-spacing: 0;
 }
 
-.cv section { margin-bottom: 1rem; }
-
-.cv dl { margin: 0; }
-
-.cv dt {
-  font-weight: bold;
-  margin-top: 0.4rem;
+.cv section {
+  margin-bottom: 0.5rem;
 }
 
-.cv dd {
-  margin: 0 0 0.6rem 0;
-  padding-left: 0;
-}
+/* ---------- date-rail entry pattern ------------------------ */
 
 .cv .entry {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 0 1.25rem;
+  margin-bottom: 1rem;
   break-inside: avoid;
   page-break-inside: avoid;
 }
 
+.cv .entry .date {
+  font-family: var(--pico-font-family-monospace);
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--pico-muted-color);
+  text-align: right;
+  padding-top: 0.2em;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+.cv .entry .body {
+  min-width: 0;
+}
+
+.cv .entry .body strong {
+  font-weight: 600;
+}
+
+.cv .entry .body em {
+  color: var(--pico-color);
+}
+
+/* ---------- CV sub-sections specifics ---------------------- */
+
 .cv ul.topics {
-  margin: 0.3rem 0 0.2rem 0;
-  padding-left: 1.2rem;
+  margin: 0.4rem 0 0 0;
+  padding-left: 1.1rem;
+  list-style: none;
 }
 
 .cv ul.topics li {
   margin: 0;
+  font-size: 0.95em;
+  color: var(--pico-color);
+  position: relative;
 }
 
-.cv ol.publications {
-  padding-left: 1.4rem;
+.cv ul.topics li::before {
+  content: "–";
+  position: absolute;
+  left: -1rem;
+  color: var(--pico-muted-color);
 }
 
-.cv ol.publications li {
-  margin-bottom: 0.8rem;
+.cv ul.supervision {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.5rem;
+  color: var(--pico-color);
+}
+
+.cv ul.supervision li::before {
+  content: "·  ";
+  color: var(--pico-muted-color);
+  margin-right: 0.25rem;
 }
 
 .cv .pub-note {
   color: var(--pico-muted-color);
-}
-
-/* CV contact list inline on the CV page (more compact) */
-body[data-page="cv"] .contact {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 1.2rem;
-  margin-bottom: 1.5rem;
+  font-style: italic;
   font-size: 0.9em;
 }
 
-/* ---------- print rules: minimal, since screen ≈ paper ----- */
+.cv .pub-id {
+  font-family: var(--pico-font-family-monospace);
+  font-size: 0.85em;
+  letter-spacing: 0.01em;
+}
+
+/* ---------- mobile ----------------------------------------- */
+
+@media (max-width: 640px) {
+  html { font-size: 16px; }
+
+  .profile {
+    float: none;
+    display: block;
+    margin: 0 auto 1.25rem;
+    width: 45%;
+    max-width: 160px;
+  }
+
+  .cv .entry {
+    grid-template-columns: 1fr;
+    gap: 0.05rem 0;
+    margin-bottom: 1.25rem;
+  }
+
+  .cv .entry .date {
+    text-align: left;
+    padding-top: 0;
+    margin-bottom: 0.15rem;
+  }
+
+  .site-header {
+    padding: 0.6rem 1rem;
+  }
+
+  main.container {
+    padding: 0 1rem;
+  }
+}
+
+/* ---------- print rules (PDF parity) ----------------------- */
 
 @page {
   size: A4;
@@ -233,34 +527,55 @@ body[data-page="cv"] .contact {
 }
 
 @media print {
+  :root,
+  [data-theme="light"] {
+    --pico-background-color: #FFFFFF;
+    --pico-color: #000000;
+    --pico-muted-color: #555555;
+    --pico-muted-border-color: #D0D0D0;
+  }
+
   .site-header,
   .site-footer { display: none !important; }
 
   body, body[data-page="cv"] {
-    background: #fff;
+    background: #FFF;
     color: #000;
     font-size: 10pt;
-    line-height: 1.35;
+    line-height: 1.4;
   }
 
-  main, body[data-page="cv"] main {
+  main, main.container {
     max-width: none !important;
     padding: 0 !important;
+  }
+
+  .cv h1.page-title {
+    font-size: 22pt;
   }
 
   .cv h2 {
     break-after: avoid;
     page-break-after: avoid;
+    font-size: 11pt;
+    margin-top: 1.6em;
+    padding-top: 0.8em;
   }
 
   .cv h3 {
     break-after: avoid;
     page-break-after: avoid;
+    font-size: 10pt;
   }
 
   .cv .entry {
     break-inside: avoid;
     page-break-inside: avoid;
+    grid-template-columns: 4.5rem 1fr;
+  }
+
+  .cv .entry .date {
+    font-size: 8.5pt;
   }
 
   section#publications {
@@ -270,4 +585,6 @@ body[data-page="cv"] .contact {
 
   /* icon fonts can be unreliable under WeasyPrint */
   .fa, .ai { display: none; }
+
+  /* sigil stays — it's inline SVG */
 }

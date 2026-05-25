@@ -4,7 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}Carmelo Mordini{% endblock %}</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   {% if not for_pdf %}
+  <link rel="preload" href="/fonts/ibm-plex/IBMPlexSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ibm-plex/IBMPlexSerif-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <script>
     (function () {
       try {
@@ -25,7 +28,14 @@
   {% if not for_pdf %}
   <header class="site-header">
     <nav>
-      <ul><li><a href="/" class="site-name"><strong>Carmelo Mordini</strong></a></li></ul>
+      <ul>
+        <li>
+          <a href="/" class="site-name">
+            {% include "partials/_sigil.html" %}
+            <strong>Carmelo Mordini</strong>
+          </a>
+        </li>
+      </ul>
       <ul>
         <li><a href="/"{% if page == 'home' %} aria-current="page"{% endif %}>Home</a></li>
         <li><a href="/cv/"{% if page == 'cv' %} aria-current="page"{% endif %}>CV</a></li>

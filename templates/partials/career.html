@@ -1,21 +1,19 @@
 <section id="career">
-  <h2>Scientific career</h2>
-  <dl>
-    {% for c in entries %}
-    <div class="entry">
-      <dt>{{ c.start }} &ndash; {{ c.end or "now" }}</dt>
-      <dd>
-        <strong>{{ c.role }}</strong> in the {{ c.group }} &ndash; {{ c.institution }}<br>
-        Project: {{ c.project }}
-        {% if c.funding %}<br>{{ c.funding }}{% endif %}
-        {% if c.supervisor %}<br>Supervisor: {{ c.supervisor }}{% endif %}
-        {% if c.topics %}
-        <ul class="topics">
-          {% for t in c.topics %}<li>{{ t }}</li>{% endfor %}
-        </ul>
-        {% endif %}
-      </dd>
+  <h2>{% include "partials/_sigil.html" %}<span>Scientific career</span></h2>
+  {% for c in entries %}
+  <div class="entry">
+    <div class="date">{{ c.start }}&ndash;{{ c.end or "now" }}</div>
+    <div class="body">
+      <strong>{{ c.role }}</strong> in the {{ c.group }} &ndash; {{ c.institution }}<br>
+      Project: {{ c.project }}
+      {% if c.funding %}<br>{{ c.funding }}{% endif %}
+      {% if c.supervisor %}<br>Supervisor: {{ c.supervisor }}{% endif %}
+      {% if c.topics %}
+      <ul class="topics">
+        {% for t in c.topics %}<li>{{ t }}</li>{% endfor %}
+      </ul>
+      {% endif %}
     </div>
-    {% endfor %}
-  </dl>
+  </div>
+  {% endfor %}
 </section>

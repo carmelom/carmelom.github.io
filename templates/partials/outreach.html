@@ -1,14 +1,12 @@
 <section id="outreach">
-  <h2>Outreach and scientific events</h2>
-  <dl>
-    {% for e in entries %}
-    <div class="entry">
-      <dt>{{ e.date or (e.start ~ " – " ~ e.end) }}</dt>
-      <dd>
-        {{ e.title }}
-        {% if e.url %}<br><a href="{{ e.url }}">{{ e.url }}</a>{% endif %}
-      </dd>
+  <h2>{% include "partials/_sigil.html" %}<span>Outreach and scientific events</span></h2>
+  {% for e in entries %}
+  <div class="entry">
+    <div class="date">{{ e.date or (e.start ~ "&ndash;" ~ e.end) }}</div>
+    <div class="body">
+      {{ e.title }}
+      {% if e.url %}<br><a href="{{ e.url }}">{{ e.url }}</a>{% endif %}
     </div>
-    {% endfor %}
-  </dl>
+  </div>
+  {% endfor %}
 </section>

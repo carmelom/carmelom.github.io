@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-  <h1>Carmelo Mordini</h1>
+  <h1 class="page-title">Carmelo Mordini</h1>
   <img class="profile" src="/images/profile-sketch-low.jpg" alt="Profile sketch of Carmelo Mordini">
 
   {% if current %}
@@ -13,5 +13,7 @@
     {{ bio | markdown | safe }}
   </div>
 
-  <p class="cv-cta"><a href="/cv/" role="button" class="secondary">View full CV &rarr;</a></p>
+  <p class="cv-cta">
+    <a href="/cv/">{% include "partials/_sigil.html" %} View full CV &rarr;</a>
+  </p>
 {% endblock %}
