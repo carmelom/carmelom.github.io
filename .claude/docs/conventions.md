@@ -17,18 +17,13 @@ When calling `mcp__playwright__browser_take_screenshot` (or any Playwright tool 
 
 ## PDF inspection via `Read`
 
-The `Read` tool opens PDF files directly (one image per page) **as long as poppler-utils is on PATH**. On Windows install via `scoop install poppler`; on Linux/Mac it's the standard `poppler-utils` apt/brew package. Pass `pages: "1"` (or a range up to 20) to limit output.
+The `Read` tool opens PDF files directly (one image per page) **as long as poppler-utils is on PATH**:
 
-If `Read site/cv.pdf` errors with `pdftoppm not found`, fall back to rendering via PyMuPDF inside WSL:
+- Linux: `apt install poppler-utils`
+- macOS: `brew install poppler`
+- Windows: `scoop install poppler`
 
-```bash
-make pdf-wsl
-wsl bash -lc "cd /mnt/c/Users/.../carmelom.github.io && \
-  uv pip install --quiet --python \$HOME/.venvs/carmelom-site/bin/python pymupdf && \
-  \$HOME/.venvs/carmelom-site/bin/python -c 'import fitz; \
-  fitz.open(\"site/cv.pdf\")[0].get_pixmap(dpi=140).save(\".playwright-mcp/cv-page1.png\")'"
-```
-Then `Read .playwright-mcp/cv-page1.png`.
+Pass `pages: "1"` (or a range up to 20) to limit output. If `Read site/cv.pdf` errors with `pdftoppm not found`, ask the user to install poppler for their OS — do not work around it with raw Python conversions.
 
 ## Permissions
 

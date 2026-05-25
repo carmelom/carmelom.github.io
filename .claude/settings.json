@@ -2,8 +2,7 @@
   "permissions": {
     "allow": [
       "mcp__playwright__*",
-      "Bash(python build.py)",
-      "Bash(make pdf-wsl *)"
+      "Bash(make *)"
     ]
   }
 }

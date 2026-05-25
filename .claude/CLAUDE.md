@@ -10,8 +10,7 @@ When you (the AI) learn something durably useful about this project (a build qui
 
 ## Quick reference
 
-- Build site: `python build.py` → `site/`
-- Build PDFs: `make pdf-wsl` (shells into WSL — required on Windows)
+Always invoke build/test/serve through the Makefile — assume `make` and `uv` are on PATH. Do not run `python`, `uv run python`, etc. directly. See [`docs/build.md`](docs/build.md) for the full target list (HTML build, PDFs, dev server, WSL bootstrap).
 
 ## Docs
 
