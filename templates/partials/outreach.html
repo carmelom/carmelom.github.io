@@ -2,7 +2,7 @@
   <h2>{% include "partials/_sigil.html" %}<span>Outreach and scientific events</span></h2>
   {% for e in entries %}
   <div class="entry">
-    <div class="date">{{ e.date or (e.start ~ "&ndash;" ~ e.end) }}</div>
+    <div class="date">{% if e.date %}<span>{{ e.date }}</span>{% else %}<span>{{ e.start }}</span><span>{{ e.end }}</span>{% endif %}</div>
     <div class="body">
       {{ e.title }}
       {% if e.url %}<br><a href="{{ e.url }}">{{ e.url }}</a>{% endif %}

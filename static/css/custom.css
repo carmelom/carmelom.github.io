@@ -330,6 +330,7 @@ main.container {
 }
 
 .contact li {
+  list-style: none;
   margin: 0;
 }
 
@@ -409,9 +410,14 @@ main.container {
   font-variant-numeric: tabular-nums;
   color: var(--pico-muted-color);
   text-align: right;
-  padding-top: 0.2em;
-  white-space: nowrap;
+  padding-top: 0.25em;
   letter-spacing: 0.01em;
+  line-height: 1.45;
+}
+
+.cv .entry .date span {
+  display: block;
+  white-space: nowrap;
 }
 
 .cv .entry .body {
@@ -435,6 +441,7 @@ main.container {
 }
 
 .cv ul.topics li {
+  list-style: none;
   margin: 0;
   font-size: 0.95em;
   color: var(--pico-color);
@@ -458,10 +465,8 @@ main.container {
   color: var(--pico-color);
 }
 
-.cv ul.supervision li::before {
-  content: "·  ";
-  color: var(--pico-muted-color);
-  margin-right: 0.25rem;
+.cv ul.supervision li {
+  list-style: none;
 }
 
 .cv .pub-note {
@@ -499,6 +504,16 @@ main.container {
     text-align: left;
     padding-top: 0;
     margin-bottom: 0.15rem;
+  }
+
+  .cv .entry .date span {
+    display: inline;
+  }
+
+  .cv .entry .date span + span::before {
+    content: "–";
+    margin: 0 0.3em;
+    color: var(--pico-muted-color);
   }
 
   .site-header {
@@ -582,9 +597,4 @@ main.container {
     break-before: page;
     page-break-before: always;
   }
-
-  /* icon fonts can be unreliable under WeasyPrint */
-  .fa, .ai { display: none; }
-
-  /* sigil stays — it's inline SVG */
 }

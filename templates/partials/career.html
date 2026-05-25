@@ -2,7 +2,7 @@
   <h2>{% include "partials/_sigil.html" %}<span>Scientific career</span></h2>
   {% for c in entries %}
   <div class="entry">
-    <div class="date">{{ c.start }}&ndash;{{ c.end or "now" }}</div>
+    <div class="date"><span>{{ c.start }}</span><span>{{ c.end or "now" }}</span></div>
     <div class="body">
       <strong>{{ c.role }}</strong> in the {{ c.group }} &ndash; {{ c.institution }}<br>
       Project: {{ c.project }}
